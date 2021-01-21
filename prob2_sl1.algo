@@ -1,0 +1,18 @@
+ALGORITHM Prob2-sol1
+VAR
+    arr1 : ARRAY_OF INTEGER[10];
+    arr2 : ARRAY_OF INTEGER[10];
+    sum,i,j:INTEGER;    
+BEGIN
+sum:=0;
+FOR i FROM 0 TO arr1.lenght-1 STEP 1  DO
+  FOR j FROM 0 TO arr2.lenght-1 STEP 1 DO
+      IF (arr1[i]=arr2[j]) THEN
+          sum:=sum+arr1[i]*2;
+          BREAK;
+      END_IF
+  END_FOR    
+END_FOR
+sum:=sum*2;
+Write("the sum is :",sum);
+END
